@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img class="password" src="password.png">
+
+<h1>PASSWORD GENERATOR</h1>
+
+<button onclick="generate()">Generate Random Password</button>
+
+<h3 id="password">PASSWORD</h3>
+
+
+
+</body>
+
+<script>
+var englishLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+let digits = ["0","1","2","3","4"];
+
+var specialCharacters = ['~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', '|', ':', ';', '"', "'", '<', ',', '>', '.', '?', '/'];
+
+function generate() {
+
+let random1 = Math.floor(Math.random() * 26 );
+let randomletter1 = englishLetters[random1].toUpperCase();
+let random2 = Math.floor(Math.random() * 26 );
+let randomletter2 = englishLetters[random2];
+let random3 = Math.floor(Math.random() * 5 );
+let random4 = Math.floor(Math.random() * 5 );
+let random5 = Math.floor(Math.random() * 10 );
+let random6 = Math.floor(Math.random() * 10 );
+let random7 = Math.floor(Math.random() * 10 );
+let random8 = Math.floor(Math.random() * 31 );
+let character = specialCharacters[random8];
+
+let randompassword = randomletter1 + "" + randomletter2 + "" + random3 + "" + random4 + "" + random5 + "" + random6 + "" + random7 + "" + character ;
+
+parseFloat(randompassword);
+
+document.getElementById("password").innerHTML = randompassword ;
+
+}
+
+
+
+</script>
+
+</html>
